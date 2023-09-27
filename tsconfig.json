@@ -6,7 +6,7 @@
     "baseUrl": "./",
     /* Specify a set of entries that re-map imports to additional lookup locations. */
     "paths": {
-      "pagination-react-native": ["./src/index"]
+      "pagination-react-native": ["index.tsx"]
     }
   }
 }
