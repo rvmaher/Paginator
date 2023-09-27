@@ -1,6 +1,6 @@
 {
   "name": "pagination-react-native",
-  "version": "1.0.3",
+  "version": "1.0.31",
   "description": "Pagination component for react-native",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rvmaher/Paginator"
+    "url": "https://github.com/rvmaher/react-native-pagination"
   },
   "keywords": [
     "react-pagination",
