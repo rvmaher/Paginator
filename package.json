@@ -16,6 +16,10 @@
     "react": "*",
     "typescript": "*"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rvmaher/Paginator"
+  },
   "keywords": [
     "react-pagination",
     "react native pagination",
