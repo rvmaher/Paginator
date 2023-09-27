@@ -1,7 +1,11 @@
 import React from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
-const usePagination = ({ currPage, totalPages, pagesPerBatch }) => {
+const usePagination = ({
+  currPage,
+  totalPages,
+  pagesPerBatch,
+}: Record<string, number>) => {
   const pagination = React.useMemo(() => {
     let startPage = Math.max(1, currPage - Math.floor(pagesPerBatch / 2));
     let endPage = Math.min(totalPages, startPage + pagesPerBatch - 1);
@@ -14,16 +18,26 @@ const usePagination = ({ currPage, totalPages, pagesPerBatch }) => {
 
   return pagination;
 };
+export interface PaginationProps {
+  currPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+  pagesPerBatch?: number;
+}
 
-const Pagination = ({
+const Pagination: React.FC<PaginationProps> = ({
   currPage,
   totalPages,
   onPageChange,
   pagesPerBatch = 3,
 }) => {
-  const getPageNumbers = usePagination({ currPage, totalPages, pagesPerBatch });
+  const getPageNumbers = usePagination({
+    currPage,
+    totalPages,
+    pagesPerBatch,
+  });
 
-  const handlePageChange = (pageNum) => {
+  const handlePageChange = (pageNum: number) => {
     if (pageNum >= 1 && pageNum <= totalPages) {
       onPageChange(pageNum);
     }
