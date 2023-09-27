@@ -1,6 +1,6 @@
 {
   "name": "pagination-react-native",
-  "version": "1.0.31",
+  "version": "1.0.4",
   "description": "Pagination component for react-native",
   "main": "index.js",
   "scripts": {
@@ -13,8 +13,7 @@
   "license": "ISC",
   "peerDependencies": {
     "react-native": "*",
-    "react": "*",
-    "typescript": "*"
+    "react": "*"
   },
   "repository": {
     "type": "git",
