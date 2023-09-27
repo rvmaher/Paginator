@@ -1,14 +1,48 @@
-Highly performant and small Pagination component for React Native
+# React Native Pagination
 
-#How to use
+The `pagination-react-native` package provides a pagination component for React Native applications.
 
-import Pagination from 'pagination-react-native';
+## Installation
 
-##Props  
+To install `pagination-react-native`, simply run the following command in your project directory:
 
-| props         | type                   | Description             |
-| ------------- | ---------------------- | ----------------------- |
-| currPage      | number                 | for current page        |
-| totalPages    | number                 | for total pages         |
-| onPageChange  | (pageNo:number)=> void | event on page change    |
-| pagesPerBatch | number (optional)      | display number of pages |
+`npm install pagination-react-native`
+
+## Features
+
+| Feature       | Description                             |
+| ------------- | --------------------------------------- |
+| currPage      | The number shows current Page.          |
+| total Pages   | indicates pages for pagination.         |
+| onPageChange  | events to handle on page change events. |
+| pagesPerBatch | no of siblings to display on batch.(default 3)     |
+
+## Usage
+
+Here's an example of how to use the `Pagination` component in your React Native application:
+
+```jsx
+import React from "react";
+import Pagination from "pagination-react-native";
+
+const MyComponent = () => {
+    
+  const [currPage, setCurrPage] = useState(1);
+
+  const onPageChange = (page: number) => {
+    console.log(`page changed: ${page}`);
+    setCurrPage(page);
+  };
+
+  return (
+    <Pagination
+      currPage={currPage}
+      totalPages={10}
+      onPageChange={onPageChange}
+      pagesPerBatch={3}
+    />
+  );
+};
+
+export default MyComponent;
+```
